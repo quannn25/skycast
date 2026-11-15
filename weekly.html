@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SkyCast — dự báo thời tiết 7 ngày tới.">
+  <title>SkyCast</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="weekly.title">
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <h1 data-i18n="weekly.title"></h1>
+          <p class="sub" id="loc-line"></p>
+        </div>
+        <div data-search></div>
+      </div>
+
+      <div data-view>
+        <div class="view-content">
+          <p class="hint" data-i18n="weekly.hint" style="margin-bottom:12px"></p>
+          <div class="week-grid" id="week" role="group"></div>
+
+          <div class="detail">
+            <section class="card" id="day-detail" aria-live="polite"></section>
+            <section class="card">
+              <div class="section-head mt-0">
+                <h2 id="day-chart-title"></h2>
+              </div>
+              <div class="chart-wrap sm"><canvas id="day-chart" role="img" aria-label="Day temperature chart"></canvas></div>
+              <div class="hour-strip" id="day-hours" style="margin-top:14px"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/weekly.js"></script>
+</body>
+</html>

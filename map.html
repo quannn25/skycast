@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SkyCast — bản đồ thời tiết, radar mưa và nhiệt độ các thành phố.">
+  <title>SkyCast</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="map.title">
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <h1 data-i18n="map.title"></h1>
+          <p class="sub" data-i18n="map.sub"></p>
+        </div>
+        <div data-search></div>
+      </div>
+
+      <div data-view>
+        <div class="view-content map-layout">
+          <div id="map" aria-label="Weather map"></div>
+
+          <aside class="map-side">
+            <section class="card">
+              <h3 data-i18n="map.layers"></h3>
+              <label class="switch"><span data-i18n="map.radar"></span><input type="checkbox" id="toggle-radar" checked></label>
+              <label class="switch"><span data-i18n="map.cities"></span><input type="checkbox" id="toggle-cities" checked></label>
+              <div class="radar-legend" aria-hidden="true"></div>
+              <div class="radar-legend-labels"><span data-i18n="map.light"></span><span data-i18n="map.heavy"></span></div>
+              <p class="radar-time" id="radar-time"></p>
+              <button class="btn btn-ghost" type="button" id="radar-play" style="margin-top:10px;width:100%"></button>
+            </section>
+
+            <section class="card">
+              <h3 data-i18n="map.cityTemps"></h3>
+              <ul class="city-temps" id="city-temps"></ul>
+            </section>
+
+            <p class="hint" data-i18n="map.hint"></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

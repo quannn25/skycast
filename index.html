@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SkyCast — tra cứu thời tiết hiện tại, dự báo theo giờ và 7 ngày tới cho mọi thành phố.">
+  <title>SkyCast</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="home.title">
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="home.heroTitle"></h1>
+        <p class="lead" data-i18n="home.heroLead"></p>
+        <div data-search></div>
+        <div class="chips" id="chips" aria-label="Popular cities"></div>
+      </div>
+    </section>
+
+    <div class="container home-main" data-view>
+      <div class="view-content">
+        <!-- Thời tiết hiện tại -->
+        <article class="card current" id="current" aria-live="polite"></article>
+
+        <div class="grid-2">
+          <!-- Vài giờ tới -->
+          <section class="section">
+            <div class="section-head">
+              <h2 data-i18n="home.nextHours"></h2>
+              <a class="link-arrow" href="hourly.html"><span data-i18n="home.seeHourly"></span> →</a>
+            </div>
+            <div class="hour-strip" id="next-hours"></div>
+            <p class="card muted" id="summary" style="margin-top:12px"></p>
+          </section>
+
+          <!-- 7 ngày tới -->
+          <section class="section">
+            <div class="section-head">
+              <h2 data-i18n="home.nextDays"></h2>
+              <a class="link-arrow" href="weekly.html"><span data-i18n="home.seeWeekly"></span> →</a>
+            </div>
+            <div class="card" style="padding:8px 16px">
+              <ul class="day-list" id="days"></ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

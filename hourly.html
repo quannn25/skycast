@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SkyCast — dự báo thời tiết theo giờ và biểu đồ nhiệt độ trong ngày.">
+  <title>SkyCast</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="hourly.title">
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div>
+          <h1 data-i18n="hourly.title"></h1>
+          <p class="sub" id="loc-line"></p>
+        </div>
+        <div data-search></div>
+      </div>
+
+      <div data-view>
+        <div class="view-content">
+          <div class="toolbar">
+            <div class="seg" role="group" aria-label="Range">
+              <button type="button" data-range="24" aria-pressed="true" data-i18n="hourly.r24"></button>
+              <button type="button" data-range="48" aria-pressed="false" data-i18n="hourly.r48"></button>
+              <button type="button" data-range="72" aria-pressed="false" data-i18n="hourly.r72"></button>
+            </div>
+            <div class="legend">
+              <span><i style="background:#f97316"></i><span data-i18n="common.temp"></span> (°C)</span>
+              <span><i style="background:#93c5fd"></i><span data-i18n="common.rainChance"></span> (%)</span>
+            </div>
+          </div>
+
+          <section class="card">
+            <div class="chart-wrap"><canvas id="temp-chart" aria-label="Temperature chart" role="img"></canvas></div>
+          </section>
+
+          <section class="section">
+            <div class="section-head"><h2 data-i18n="hourly.cards"></h2></div>
+            <div class="hour-strip" id="hour-cards"></div>
+          </section>
+
+          <section class="section">
+            <div class="section-head"><h2 data-i18n="hourly.table"></h2></div>
+            <div class="card" style="padding:0">
+              <div class="table-wrap">
+                <table class="data">
+                  <thead>
+                    <tr>
+                      <th data-i18n="common.time"></th>
+                      <th data-i18n="common.condition"></th>
+                      <th data-i18n="common.temp"></th>
+                      <th data-i18n="common.feels"></th>
+                      <th data-i18n="common.rainChance"></th>
+                      <th data-i18n="common.rainSum"></th>
+                      <th data-i18n="common.humidity"></th>
+                      <th data-i18n="common.wind"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="hour-table"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/hourly.js"></script>
+</body>
+</html>

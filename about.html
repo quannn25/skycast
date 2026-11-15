@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Giới thiệu website SkyCast, nguồn dữ liệu thời tiết và nhóm thực hiện.">
+  <title>SkyCast</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="about.title">
+  <main class="page">
+    <div class="container">
+      <!-- Giới thiệu -->
+      <section class="card about-hero">
+        <div class="prose">
+          <h1 data-i18n="about.title" style="font-size:var(--fs-2xl);margin-bottom:12px"></h1>
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+        </div>
+        <img src="assets/logo.svg" alt="SkyCast logo" width="160" height="160">
+      </section>
+
+      <!-- Tính năng -->
+      <section class="section">
+        <div class="section-head"><h2 data-i18n="about.features"></h2></div>
+        <div class="features" id="features"></div>
+      </section>
+
+      <div class="grid-2">
+        <!-- Nguồn dữ liệu -->
+        <section class="section">
+          <div class="section-head"><h2 data-i18n="about.data"></h2></div>
+          <div class="card prose">
+            <p data-i18n-html="about.dataP1"></p>
+            <p data-i18n-html="about.dataP2"></p>
+          </div>
+        </section>
+
+        <!-- Công nghệ -->
+        <section class="section">
+          <div class="section-head"><h2 data-i18n="about.tech"></h2></div>
+          <div class="card" style="padding:0">
+            <table class="data">
+              <tbody>
+                <tr><th data-i18n="about.t.structure"></th><td>HTML5</td></tr>
+                <tr><th data-i18n="about.t.style"></th><td>CSS3 (Flexbox, Grid, Media queries)</td></tr>
+                <tr><th data-i18n="about.t.logic"></th><td>JavaScript (ES6+, Fetch API)</td></tr>
+                <tr><th data-i18n="about.t.data"></th><td><a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo API</a></td></tr>
+                <tr><th data-i18n="about.t.chart"></th><td><a href="https://www.chartjs.org/" target="_blank" rel="noopener">Chart.js</a></td></tr>
+                <tr><th data-i18n="about.t.map"></th><td><a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> + Esri + RainViewer</td></tr>
+                <tr><th data-i18n="about.t.graphic"></th><td>Adobe Photoshop, SVG</td></tr>
+                <tr><th data-i18n="about.t.host"></th><td>GitHub Pages</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- Nhóm thực hiện -->
+      <section class="section">
+        <div class="section-head"><h2 data-i18n="about.team"></h2></div>
+        <div class="card">
+          <p class="muted" data-i18n="about.teamSub" style="margin-bottom:14px"></p>
+          <ul class="team">
+            <li><div class="avatar">1</div><div><b data-i18n="about.member">Thành viên</b> 1<small data-i18n="about.role1"></small></div></li>
+            <li><div class="avatar">2</div><div><b data-i18n="about.member">Thành viên</b> 2<small data-i18n="about.role2"></small></div></li>
+            <li><div class="avatar">3</div><div><b data-i18n="about.member">Thành viên</b> 3<small data-i18n="about.role3"></small></div></li>
+            <li><div class="avatar">4</div><div><b data-i18n="about.member">Thành viên</b> 4<small data-i18n="about.role4"></small></div></li>
+            <li><div class="avatar">5</div><div><b data-i18n="about.member">Thành viên</b> 5<small data-i18n="about.role5"></small></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="grid-2">
+        <!-- Sơ đồ website -->
+        <section class="section">
+          <div class="section-head"><h2 data-i18n="about.sitemap"></h2></div>
+          <pre class="sitemap" id="sitemap"></pre>
+        </section>
+
+        <!-- Liên hệ -->
+        <section class="section">
+          <div class="section-head"><h2 data-i18n="about.contact"></h2></div>
+          <div class="card prose">
+            <p data-i18n="about.contactP"></p>
+            <p style="margin-top:12px"><a class="btn btn-ghost" href="mailto:skycast.team@example.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>skycast.team@example.com</a></p>
+            <p class="muted" style="margin-top:12px" data-i18n="about.school"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
